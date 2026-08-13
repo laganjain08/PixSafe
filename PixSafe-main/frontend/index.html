@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PixSafe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<script src="script.js"></script>
+
+<body>
+
+    <!-- 🔝 MODERN NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Left -->
+            <div class="logo">PixSafe</div>
+
+            <!-- Center -->
+            <div class="nav-links">
+                <a onclick="scrollToFeatures()">Features</a>
+                <a href="about.html">About</a>
+            </div>
+
+            <!-- Right -->
+            <div class="nav-actions">
+                <a>
+                    <button class="icon-btn">📩</button>
+                </a>
+                <a>
+                    <button class="icon-btn">🔗</button>
+                </a>
+            </div>
+
+        </div>
+
+
+
+    </nav>
+    <!-- FEATURES DROPDOWN -->
+    <div class="features-dropdown" id="featuresDropdown">
+        <div class="features-dropdown-inner">
+            <div class="fd-item">
+                <span class="fd-icon">🔗</span>
+                <div>
+                    <strong>URL Scanner</strong>
+                    <p>Paste any suspicious link and get an instant threat report.</p>
+                </div>
+            </div>
+            <div class="fd-item">
+                <span class="fd-icon">🖼️</span>
+                <div>
+                    <strong>Image Scanner</strong>
+                    <p>Upload images to detect QR codes, scam content & malware.</p>
+                </div>
+            </div>
+            <div class="fd-item">
+                <span class="fd-icon">🤖</span>
+                <div>
+                    <strong>AI-Powered</strong>
+                    <p>Claude Vision analyzes every scan with advanced AI detection.</p>
+                </div>
+            </div>
+            <div class="fd-item">
+                <span class="fd-icon">📋</span>
+                <div>
+                    <strong>Scan History</strong>
+                    <p>Review all your past scans with threat scores and details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 🌌 HERO -->
+    <section class="hero">
+
+        <h1 class="main-title">
+            Protect Your<br>
+            Digital World Instantly
+        </h1>
+
+        <p class="hero-desc">
+            Analyze suspicious images and links in seconds with smart detection.
+            Upload or paste anything, and get instant results to stay safe from
+            malware, phishing, and online threats effortlessly.
+        </p>
+
+        <div class="hero-buttons">
+            <!-- <button onclick="openPanel('scanPanel')">Get Started</button> -->
+            <a href="scan.html" style="text-decoration:none;">
+                <button>Get Started</button>
+            </a>
+            <!-- <span class="secondary-text">Help Us Improve</span> -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUJ2tu1JofsAkH496J_a6pSqtxx9pL6OYFFMrln2MkK1_7Rw/viewform?usp=publish-editor"
+                target="_blank" class="secondary-text">
+                Help Us Improve
+            </a>
+        </div>
+
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <!-- 🎥 AUTO VIDEO SECTION -->
+    <section class="video-preview">
+
+        <div class="video-container">
+            <video autoplay muted loop playsinline>
+                <source src="PixSafe Demo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </section>
+
+    <!-- 🧠 SIMPLE TEXT SECTION -->
+    <section class="safe-section">
+
+        <h2 class="safe-title">
+            Stay Safe with PixSafe
+        </h2>
+
+        <p class="safe-desc">
+            PixSafe provides real-time detection of harmful links and images, helping users instantly identify
+            potential
+            threats. It enables safer browsing by delivering quick, reliable results and enhancing overall online
+            security.
+        </p>
+    </section>
+
+    <!-- 🎯 FEATURE SLIDER BOX -->
+    <section class="feature-slider" id="featuresSection">
+
+        <div class="feature-box">
+
+            <div class="top-line"></div>
+
+            <div class="slider-container">
+
+                <div class="slide active">
+                    <h4>Feature 1 of 5</h4>
+                    <h2>How PixSafe Protects You</h2>
+                    <p>Instantly scans links and images to detect threats and keep you safe online.</p>
+                </div>
+
+                <div class="slide">
+                    <h4>Feature 2 of 5</h4>
+                    <h2>Smart Protection with PixSafe</h2>
+                    <p>Quickly analyzes content to identify risks and prevent cyber threats.</p>
+                </div>
+
+                <div class="slide">
+                    <h4>Feature 3 of 5</h4>
+                    <h2>Stay Safe with PixSafe</h2>
+                    <p>Real-time detection of harmful links and images for secure browsing.</p>
+                </div>
+
+                <div class="slide">
+                    <h4>Feature 4 of 5</h4>
+                    <h2>Your Digital Safety, Simplified</h2>
+                    <p>Fast and intelligent scanning to protect you from online dangers.</p>
+                </div>
+
+                <div class="slide">
+                    <h4>Feature 5 of 5</h4>
+                    <h2>Secure Every Click with PixSafe</h2>
+                    <p>Identify unsafe content instantly and browse with confidence.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DOTS -->
+        <div class="dots">
+            <span onclick="goToSlide(0)" class="active"></span>
+            <span onclick="goToSlide(1)"></span>
+            <span onclick="goToSlide(2)"></span>
+            <span onclick="goToSlide(3)"></span>
+            <span onclick="goToSlide(4)"></span>
+        </div>
+
+    </section>

@@ -1,0 +1,469 @@
+/* 🔥 FINAL CLEAN SPACING (OVERRIDES ALL ABOVE) */
+
+.hero {
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.video-preview {
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.safe-section {
+    padding: 30px 20px;
+}
+
+.feature-slider {
+    padding: 40px 20px;
+}
+
+/* TEXT GAP FIX */
+.safe-title {
+    margin-bottom: 5px;
+}
+
+.safe-desc {
+    margin-top: 10px;
+}
+
+/* SLIDER BOX */
+.feature-box {
+    margin-top: 10px;
+    padding: 30px;
+}
+
+/* 🔽 SLIDER BOX TOP GAP FIX */
+.feature-box {
+    margin-top: 20px;
+    /* reduce gap above slider */
+}
+
+/* NAVBAR FIX */
+.navbar {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 20px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO POSITION FIX */
+/* HERO CLEAN */
+.hero {
+    text-align: center;
+    padding-top: 160px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* BIG TITLE */
+.main-title {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+/* DESCRIPTION */
+.hero-desc {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* BUTTON AREA */
+.hero-buttons {
+    margin-top: 30px;
+}
+
+/* PRIMARY BUTTON */
+.hero-buttons button {
+    padding: 12px 25px;
+    border-radius: 12px;
+    background: black;
+    color: white;
+    border: 1px solid #444;
+    cursor: pointer;
+}
+
+/* SECONDARY TEXT */
+.secondary-text {
+    margin-left: 15px;
+    color: #888;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* VIDEO SECTION */
+.video-preview {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+/* VIDEO BOX */
+.video-container {
+    width: 80%;
+    max-width: 900px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: #111;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+    padding: 10px;
+}
+
+/* VIDEO */
+.video-container video {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+/* SIMPLE TEXT SECTION */
+.safe-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* BIG TITLE */
+.safe-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* DESCRIPTION */
+.safe-desc {
+    margin-top: 20px;
+    font-size: 18px;
+    /* bigger text */
+    color: #aaa;
+    line-height: 1.7;
+    /* better readability */
+    max-width: 700px;
+    /* keeps text centered nicely */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TITLE ALSO MAKE BIG (IMPORTANT) */
+.safe-title {
+    font-size: 48px;
+    /* bigger heading */
+    font-weight: 700;
+}
+
+/* SLIDER SECTION */
+.feature-slider {
+    padding: 140px 20px;
+    /* more spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SLIDER BOX BIGGER */
+.feature-box {
+    width: 90%;
+    /* wider */
+    max-width: 1000px;
+    /* increased size */
+    padding: 50px;
+    /* more breathing space */
+}
+
+/* SLIDE TEXT BIGGER */
+.slide h2 {
+    font-size: 32px;
+    /* bigger main text */
+}
+
+.slide p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* MAIN BOX */
+.feature-box {
+    width: 80%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* TOP INDICATOR LINE */
+.top-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 120px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* SLIDES */
+.slider-container {
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* TEXT */
+.slide h4 {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.slide h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* DOTS */
+.dots {
+    margin-top: 20px;
+}
+
+.dots span {
+    height: 8px;
+    width: 8px;
+    background: #555;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dots span.active {
+    background: white;
+}
+
+/* HERO FIX */
+.hero {
+    text-align: center;
+    padding-top: 100px;
+    /* reduced */
+    max-width: 900px;
+    margin: auto;
+}
+
+/* VIDEO */
+.video-preview {
+    margin-top: 40px;
+    /* reduced from 80px */
+}
+
+/* SAFE SECTION */
+.safe-section {
+    padding: 50px 20px;
+    /* reduced from 100px */
+}
+
+/* FEATURE SLIDER */
+.feature-slider {
+    padding: 60px 20px;
+    /* 🔥 biggest fix (was 140px) */
+}
+
+/* FEATURE BOX */
+.feature-box {
+    margin-top: 10px;
+    width: 80%;
+    max-width: 900px;
+    padding: 30px;
+}
+
+.top-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    /* start from 0 */
+    background: white;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+@keyframes slideProgress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.top-line.animate {
+    animation: slideProgress 3s linear forwards;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* ❌ removes underline */
+}
+
+body {
+    background: #f5f5f7;
+    color: #111;
+}
+
+.main-title,
+.safe-title,
+.slide h2,
+.logo {
+    color: #111;
+}
+
+.hero-desc,
+.safe-desc,
+.slide p,
+.slide h4,
+.nav-links a {
+    color: #333;
+}
+
+/* ── Features Dropdown ── */
+.features-dropdown {
+    position: fixed;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.features-dropdown.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(-50%) translateY(0);
+}
+
+.features-dropdown-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    padding: 12px;
+}
+
+.fd-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 14px;
+    cursor: default;
+    transition: background 0.2s;
+}
+
+.fd-item:hover {
+    background: #f5f5f7;
+}
+
+.fd-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.fd-item strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 3px;
+}
+
+.fd-item p {
+    font-size: 0.78rem;
+    color: #888;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 560px) {
+    .features-dropdown-inner {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PixSafe — Scanner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css"> <!-- shared base styles -->
+    <link rel="stylesheet" href="scan.css"> <!-- scanner-specific styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 🔝 SAME NAVBAR as index.html -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Left -->
+            <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">PixSafe</a></div>
+
+            <!-- Center -->
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+
+            <!-- Right -->
+            <div class="nav-actions">
+                <div class="nav-actions">
+                    <a>
+                        <button class="icon-btn">📩</button>
+                    </a>
+                    <a>
+                        <button class=" icon-btn">🔗</button>
+                    </a>
+                </div>
+
+            </div>
+    </nav>
+
+    <!-- 🛡️ SCANNER PAGE BODY -->
+    <main class="scan-page">
+
+        <!-- Page Heading -->
+        <div class="scan-header">
+            <h1 class="scan-title">Scan Anything</h1>
+            <p class="scan-subtitle">
+                Upload an image or paste a URL — our AI instantly checks if it's safe or harmful.
+            </p>
+        </div>
+
+        <!-- ── STATS ROW ── -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-num" id="statTotal">0</div>
+                <div class="stat-lbl">Scans Done</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num stat-safe" id="statSafe">0</div>
+                <div class="stat-lbl">Safe</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num stat-danger" id="statDanger">0</div>
+                <div class="stat-lbl">Harmful</div>
+            </div>
+        </div>
+
+        <!-- ── TAB SWITCHER ── -->
+        <div class="scan-tabs">
+            <button class="scan-tab active" id="tab-url" onclick="switchTab('url')">🔗 URL Scanner</button>
+            <button class="scan-tab" id="tab-img" onclick="switchTab('image')">🖼️ Image Scanner</button>
+        </div>
+
+        <!-- ── SCANNER PANEL ── -->
+        <div class="scan-panel">
+
+            <!-- URL PANE -->
+            <div class="scan-pane active" id="pane-url">
+                <p class="pane-label">Paste a suspicious link below</p>
+
+                <input type="url" id="urlInput" class="url-input" placeholder="https://example.com/suspicious-link" />
+
+                <div class="tip-box">
+                    💡 <strong>Tip:</strong> Works with phishing emails, shortened URLs (bit.ly, tinyurl), and social
+                    media links.
+                </div>
+
+                <button class="scan-btn" id="urlScanBtn" onclick="scanURL()">⚡ Scan URL</button>
+            </div>
+
+            <!-- IMAGE PANE -->
+            <div class="scan-pane" id="pane-image">
+                <p class="pane-label">Upload an image to analyze</p>
+
+                <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()"
+                    ondragover="handleDrag(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+
+                    <input type="file" id="fileInput" accept="image/*" onchange="handleFile(this.files[0])" />
+                    <div class="drop-icon">📁</div>
+                    <div class="drop-text" id="fileText">
+                        <strong>Click to upload</strong> or drag &amp; drop<br />PNG, JPG, WEBP · Max 5MB
+                    </div>
+                    <img class="preview-img" id="previewImg" style="display:none;" alt="preview" />
+                </div>
+
+                <div class="tip-box">
+                    💡 <strong>Tip:</strong> Upload images from WhatsApp, emails, or unknown sources. AI checks for QR
+                    codes, fake warnings &amp; scam content.
+                </div>
+
+                <button class="scan-btn" id="imgScanBtn" onclick="scanImage()" disabled>⚡ Scan Image</button>
+            </div>
+
+            <!-- ── LOADER ── -->
+            <div id="loader" class="loader hidden">
+                <div class="loader-ring"></div>
+                <span>Analyzing...</span>
+            </div>
+
+            <!-- ── RESULT CARD ── -->
+            <div class="result-card" id="resultCard">
+
+                <div class="verdict-row">
+                    <span class="verdict-icon" id="verdictIcon">✅</span>
+                    <span class="verdict-label" id="verdictLabel">SAFE</span>
+                    <span class="verdict-badge" id="verdictBadge">Safe</span>
+                </div>
+
+                <p class="analysis-text" id="analysisText"></p>
+
+                <!-- detail chips -->
+                <div class="details-grid" id="detailsGrid"></div>
+
+                <!-- threat bar -->
+                <div class="score-section">
+                    <div class="score-label">Threat Level</div>
+                    <div class="score-bar-bg">
+                        <div class="score-bar-fill" id="scoreBar" style="width:0%"></div>
+                    </div>
+                </div>
+
+            </div><!-- /result-card -->
+
+        </div><!-- /scan-panel -->
+
+        <!-- ── HISTORY ── -->
+        <div class="history-section">
+            <div class="history-header">
+                <span class="history-title">📋 Scan History</span>
+                <button class="clear-btn" onclick="clearHistory()">Clear All</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="history-empty">No scans yet — paste a URL or upload an image above.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- <script src="scan.js"></script> -->
+    <script src="scan.js" defer></script>
+
+</body>
+
+</html>
