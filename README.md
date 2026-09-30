@@ -2,6 +2,9 @@
 
 ## About
 PixSafe is a web-based security tool that helps users identify potentially unsafe URLs and suspicious images. It provides a simple Safe/Unsafe result with a threat level for easy understanding.
+## Live Demo
+
+[Visit PixSafe](https://pix-safe-nine.vercel.app/scan.html)
 
 ## Features
 - Scan URLs for suspicious or unsafe patterns.
